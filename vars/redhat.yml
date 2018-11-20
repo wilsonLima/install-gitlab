@@ -1,0 +1,7 @@
+---
+
+dependencias:
+  - curl
+  - policycoreutils-python
+  - openssh-server
+  - postfix

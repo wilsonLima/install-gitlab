@@ -1,0 +1,24 @@
+---
+
+- name: Instalando as dependencias
+  yum:
+   name: "{{ dependencias }}"
+   state: present
+  notify:
+   - Start SSHD
+   - Start Postfix
+
+- name: Baixando o Script de Instalacao do GitLab
+  get_url:
+   url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh
+   dest: /tmp/script.rpm.sh
+
+- name: Executando o Script de Instalacao do GitLab
+  command: bash /tmp/script.rpm.sh
+
+
+- name: Instalando o GitLab CE
+  yum:
+   name: gitlab-ee
+   state: present
+  register: gitlab

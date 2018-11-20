@@ -1,0 +1,6 @@
+---
+
+dependencias:
+  - openssh-server
+  - ca-certificates
+  - postfix

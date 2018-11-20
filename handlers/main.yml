@@ -1,0 +1,14 @@
+---
+# handlers file for install-gitlab
+
+- name: Start SSHD 
+  service:
+    name: sshd
+    state: started
+    enabled: yes
+
+- name: Start Postfix 
+  service:
+    name: postfix
+    state: started
+    enabled: yes

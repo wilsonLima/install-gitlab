@@ -1,0 +1,27 @@
+---
+# tasks file for install-gitlab
+
+- name: Incluindo variaveis especificas do SO
+  include_vars: "{{ item }}"
+  with_first_found:
+   - ../vars/{{ ansible_distribution | lower }}.yml
+   - ../vars/{{ ansible_os_family | lower }}.yml
+
+- include_tasks: "{{ item }}"
+  with_first_found:
+   - "{{ ansible_distribution | lower }}.yml"
+   - "{{ ansible_os_family | lower }}.yml"
+   - "os_defaults.yml"
+
+- name: Define o arquivo de configuracao do GitLab
+  when: os_default is not defined
+  copy:
+   src: gitlab.rb
+   dest: /etc/gitlab/gitlab.rb
+   owner: root
+   group: root
+   mode: 0644
+
+- name: Reconfigurando o GitLab
+  when: os_default is not defined
+  command: gitlab-ctl reconfigure
