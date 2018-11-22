@@ -21,7 +21,11 @@
    owner: root
    group: root
    mode: 0644
+  tags:
+   - config
 
 - name: Reconfigurando o GitLab
   when: os_default is not defined
   command: gitlab-ctl reconfigure
+  tags:
+   - config

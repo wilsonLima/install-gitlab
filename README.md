@@ -9,6 +9,16 @@ Distribuições Suportadas pela Role
 - Debian
 - RedHat ou CentOS
 
+
+Tags da Role 
+--------------
+
+- deps: Instala as dependências do GitLab CE.
+- script: Baixa e executa o script de instalaçaõ do repositório do GitLab CE.
+- gitlab: Realiza a instalação do pacote do GitLab CE.
+- config: Realiza a configuração de pós instalação do GitLab CE.
+  
+
 Variáveis da Role
 --------------
 

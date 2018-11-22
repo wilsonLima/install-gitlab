@@ -7,18 +7,26 @@
   notify:
    - Start SSHD
    - Start Postfix
+  tags:
+   - deps
 
 - name: Baixando o Script de Instalacao do GitLab
   get_url:
    url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh
    dest: /tmp/script.rpm.sh
+  tags:
+   - script
 
 - name: Executando o Script de Instalacao do GitLab
   command: bash /tmp/script.rpm.sh
+  tags:
+   - script
+
 
 
 - name: Instalando o GitLab CE
   yum:
-   name: gitlab-ee
+   name: gitlab-ce
    state: present
-  register: gitlab
+  tags:
+   - gitlab

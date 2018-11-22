@@ -5,14 +5,20 @@
    name: "{{ dependencias }}"
    state: present
    update_cache: yes
+  tags:
+   - deps
 
 - name: Baixando o Script de Instalacao do GitLab
   get_url:
    url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh
    dest: /tmp/script.deb.sh
+  tags:
+   - script
 
 - name: Executando o Script de Instalacao do GitLab
   command: bash /tmp/script.deb.sh
+  tags:
+   - script
 
 
 - name: Instalando o GitLab CE
@@ -20,4 +26,5 @@
    name: gitlab-ee
    state: present
    update_cache: yes
-  register: gitlab
+  tags: 
+   - gitlab
