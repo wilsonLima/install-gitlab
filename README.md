@@ -13,6 +13,7 @@ Distribuições Suportadas pela Role
 Tags da Role 
 --------------
 
+- main: Tag a ser utilizada em conjunto com outras tags, se alguma tag for especificada no comando.
 - deps: Instala as dependências do GitLab CE.
 - script: Baixa e executa o script de instalaçaõ do repositório do GitLab CE.
 - gitlab: Realiza a instalação do pacote do GitLab CE.
