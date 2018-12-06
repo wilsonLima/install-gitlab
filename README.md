@@ -24,7 +24,7 @@ Variáveis da Role
 --------------
 
 
-Examplos de Playbook
+Exemplos de Playbook
 ----------------
 
 Exemplo de uso da Role:
