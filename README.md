@@ -33,7 +33,13 @@ Exemplo de uso da Role:
       roles:
          - install-gitlab
 
-License
--------
+Exemplo de Comandos
+----------------
 
-BSD
+Comando para executar todas as tasks:
+
+    ansible-playbook -i <caminho_inventario> <caminho_playbook>
+
+Comando para executar a tag "config" (em caso de uso de tags, a tag "main" é obrigatória):
+
+    ansible-playbook -i <caminho_inventario> <caminho_playbook> --tags "main, config"
