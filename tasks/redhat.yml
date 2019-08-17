@@ -12,7 +12,7 @@
 
 - name: Baixando o Script de Instalacao do GitLab
   get_url:
-   url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh
+   url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh
    dest: /tmp/script.rpm.sh
   tags:
    - script
