@@ -6,8 +6,8 @@ Role do Ansible para instalação de um servidor GitLab CE.
 Distribuições Suportadas pela Role
 ------------
 
-- Debian
-- RedHat ou CentOS
+- Debian 9 ou superior
+- RedHat ou CentOS 7 ou inferior
 
 
 Tags da Role 

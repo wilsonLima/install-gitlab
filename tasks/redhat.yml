@@ -1,6 +1,6 @@
 ---
 
-- name: Instalando as dependencias
+- name: "Instalando as dependencias"
   yum:
    name: "{{ dependencias }}"
    state: present
@@ -10,21 +10,21 @@
   tags:
    - deps
 
-- name: Baixando o Script de Instalacao do GitLab
+- name: "Baixando o Script de Instalacao do GitLab"
   get_url:
    url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh
    dest: /tmp/script.rpm.sh
   tags:
    - script
 
-- name: Executando o Script de Instalacao do GitLab
+- name: "Executando o Script de Instalacao do GitLab"
   command: bash /tmp/script.rpm.sh
   tags:
    - script
 
 
 
-- name: Instalando o GitLab CE
+- name: "Instalando o GitLab CE"
   yum:
    name: gitlab-ce
    state: present
