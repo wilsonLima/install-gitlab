@@ -10,7 +10,7 @@
 
 - name: "Baixando o Script de Instalacao do GitLab"
   get_url:
-   url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh
+   url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
    dest: /tmp/script.deb.sh
   tags:
    - script
@@ -23,7 +23,7 @@
 
 - name: "Instalando o GitLab CE"
   apt:
-   name: gitlab-ee
+   name: gitlab-ce
    state: present
    update_cache: yes
   tags: 
