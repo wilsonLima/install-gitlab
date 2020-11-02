@@ -7,7 +7,7 @@ Distribuições Suportadas pela Role
 ------------
 
 - Debian 9 ou superior
-- RedHat ou CentOS 7 ou inferior
+- RedHat ou CentOS versão 7 ou superior
 
 
 Tags da Role 

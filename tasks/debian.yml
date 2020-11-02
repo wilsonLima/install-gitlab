@@ -1,5 +1,6 @@
 ---
 
+
 - name: "Instalando as dependencias"
   apt:
    name: "{{ dependencias }}"
@@ -8,12 +9,14 @@
   tags:
    - deps
 
+
 - name: "Baixando o Script de Instalacao do GitLab"
   get_url:
    url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
    dest: /tmp/script.deb.sh
   tags:
    - script
+
 
 - name: "Executando o Script de Instalacao do GitLab"
   command: bash /tmp/script.deb.sh
